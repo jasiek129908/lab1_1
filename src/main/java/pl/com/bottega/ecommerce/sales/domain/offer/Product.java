@@ -11,13 +11,13 @@ public class Product {
 
     private String type;
 
-    private Money money;
+    private Money price;
 
-    public Product(String id, String name, String type, Money money) {
+    public Product(String id, String name, String type, Money price) {
         this.id = id;
         this.name = name;
         this.type = type;
-        this.money = money;
+        this.price = price;
     }
 
     public String getId() {
@@ -32,8 +32,8 @@ public class Product {
         return type;
     }
 
-    public Money getMoney() {
-        return money;
+    public Money getPrice() {
+        return price;
     }
 
     @Override
@@ -44,11 +44,11 @@ public class Product {
         return Objects.equals(id, product.id) &&
                 Objects.equals(name, product.name) &&
                 Objects.equals(type, product.type) &&
-                Objects.equals(money, product.money);
+                Objects.equals(price, product.price);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, name, type, money);
+        return Objects.hash(id, name, type, price);
     }
 }
