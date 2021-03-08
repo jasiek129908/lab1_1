@@ -5,31 +5,31 @@ import java.util.Objects;
 
 public class Product {
 
-    private String productId;
+    private String id;
 
-    private String productName;
+    private String name;
 
-    private String productType;
+    private String type;
 
     private Money money;
 
-    public Product(String productId, String productName, String productType, Money money) {
-        this.productId = productId;
-        this.productName = productName;
-        this.productType = productType;
+    public Product(String id, String name, String type, Money money) {
+        this.id = id;
+        this.name = name;
+        this.type = type;
         this.money = money;
     }
 
-    public String getProductId() {
-        return productId;
+    public String getId() {
+        return id;
     }
 
-    public String getProductName() {
-        return productName;
+    public String getName() {
+        return name;
     }
 
-    public String getProductType() {
-        return productType;
+    public String getType() {
+        return type;
     }
 
     public Money getMoney() {
@@ -41,14 +41,14 @@ public class Product {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Product product = (Product) o;
-        return Objects.equals(productId, product.productId) &&
-                Objects.equals(productName, product.productName) &&
-                Objects.equals(productType, product.productType) &&
+        return Objects.equals(id, product.id) &&
+                Objects.equals(name, product.name) &&
+                Objects.equals(type, product.type) &&
                 Objects.equals(money, product.money);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(productId, productName, productType, money);
+        return Objects.hash(id, name, type, money);
     }
 }
