@@ -29,8 +29,8 @@ public class OfferItem {
 
     private Discount discount;
 
-    public OfferItem(Product product, Date productSnapshotDate, int quantity) {
-        this(product, productSnapshotDate, quantity, null, null);
+    public OfferItem(Product product, Date productSnapshotDate, int quantity, Money money) {
+        this(product, productSnapshotDate, quantity, money, null);
     }
 
     public OfferItem(Product product, Date productSnapshotDate,
